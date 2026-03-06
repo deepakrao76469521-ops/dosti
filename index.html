@@ -51,17 +51,15 @@ color:white;
 <h1>Tum meri bahut achi dost banogi? 😊</h1>
 
 <div id="buttons">
-
 <button id="yes" onclick="yes()">Haan ❤️</button>
 <button id="maybe" onclick="maybe()">Pata nahi 🤔</button>
-
-</div>
-
 <button id="no" onmouseover="move()">Nahi 😅</button>
+</div>
 
 <script>
 
-let size = 18;
+let yesSize = 18;
+let maybeSize = 18;
 
 function yes(){
 document.body.innerHTML="<h1>Yayyy! ❤️<br>Mujhe pata tha 😊</h1>";
@@ -77,8 +75,13 @@ document.getElementById("no").style.top=y+"px";
 }
 
 function maybe(){
-size += 10;
-document.getElementById("yes").style.fontSize = size + "px";
+
+yesSize += 8;
+maybeSize -= 2;
+
+document.getElementById("yes").style.fontSize = yesSize + "px";
+document.getElementById("maybe").style.fontSize = maybeSize + "px";
+
 }
 
 </script>
