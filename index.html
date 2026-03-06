@@ -26,6 +26,10 @@ position:absolute;
 background:#999;
 color:white;
 }
+#maybe{
+background:#ffaa00;
+color:white;
+}
 </style>
 </head>
 
@@ -35,8 +39,12 @@ color:white;
 
 <button id="yes" onclick="yes()">Haan ❤️</button>
 <button id="no" onmouseover="move()">Nahi 😅</button>
+<button id="maybe" onclick="maybe()">Pata nahi 🤔</button>
 
 <script>
+
+let size = 18;
+
 function yes(){
 document.body.innerHTML="<h1>Yayyy! ❤️<br>Mujhe pata tha 😊</h1>";
 document.body.style.fontSize="30px";
@@ -48,6 +56,12 @@ let y=Math.random()*window.innerHeight;
 document.getElementById("no").style.left=x+"px";
 document.getElementById("no").style.top=y+"px";
 }
+
+function maybe(){
+size += 10;
+document.getElementById("yes").style.fontSize = size + "px";
+}
+
 </script>
 
 </body>
