@@ -36,6 +36,7 @@ color:white;
 #no{
 background:#999;
 color:white;
+position:absolute;
 }
 
 #maybe{
@@ -53,7 +54,7 @@ color:white;
 <div id="buttons">
 <button id="yes" onclick="yes()">Haan ❤️</button>
 <button id="maybe" onclick="maybe()">Pata nahi 🤔</button>
-<button id="no">Nahi 😅</button>
+<button id="no" onmouseover="move()">Nahi 😅</button>
 </div>
 
 <script>
@@ -72,6 +73,18 @@ maybeScale -= 0.1;
 
 document.getElementById("yes").style.transform="scale("+yesScale+")";
 document.getElementById("maybe").style.transform="scale("+maybeScale+")";
+
+}
+
+function move(){
+
+let no=document.getElementById("no");
+
+let x=Math.random()*(window.innerWidth-150);
+let y=Math.random()*(window.innerHeight-100);
+
+no.style.left=x+"px";
+no.style.top=y+"px";
 
 }
 
